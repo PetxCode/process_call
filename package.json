@@ -1,0 +1,27 @@
+{
+  "name": "process1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "started": "ts-node-dev --respawn index.ts",
+    "started1": "ts-node-dev --respawn process.ts",
+    "dev": "pm2 start dist/process.js --watch -f --ignore-watch --name processed",
+    "deve": "pm2 start dist/process.js",
+    "proc": "node dist/index.js",
+    "ind": "pm2 start dist/index.js",
+    "ind1": "pm2 start dist/process.js --watch",
+    "start": "npm run ind && npm run ind1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.21",
+    "cron": "^3.1.7",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.2",
+    "pm2": "^5.3.1"
+  }
+}
