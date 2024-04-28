@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
         });
     }
 });
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     (0, mongoose_1.connect)(url).then(() => {
         console.log("connected from process");
     });

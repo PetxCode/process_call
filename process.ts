@@ -34,7 +34,7 @@ app.get("/", (req: Request, res: Response) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   connect(url).then(() => {
     console.log("connected from process");
   });
