@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/api", (req: Request, res: Response) => {
   try {
     const job = new CronJob(
       "10 * * * * *", // cronTime
