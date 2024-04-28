@@ -10,7 +10,7 @@ const port = 2299;
 const url = "mongodb://localhost:27017/process";
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     try {
         const job = new cron_1.CronJob("10 * * * * *", // cronTime
         function () {
